@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="TestReverseAjax"
+  id="myeclipse.1320568040722"
+  context-root="/TestReverseAjax"
+  j2ee-spec="5.0"
+  archive="TestReverseAjax.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
