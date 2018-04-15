@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/main/java/dao/UserDAO.java=UTF-8
+encoding//src/main/java/entity=UTF-8
+encoding//src/main/java/entity/User.java=UTF-8
+encoding//src/main/java/web/CheckcodeServlet.java=UTF-8
+encoding//src/main/webapp/NETCTOSS_V02/styles/global.css=UTF-8
+encoding//src/main/webapp/NETCTOSS_V02/styles/global_color.css=UTF-8
+encoding//src/main/webapp/WEB-INF/error.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/fee_add.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/login.jsp=UTF-8
