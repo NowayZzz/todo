@@ -1,0 +1,35 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+1.树形的拖拽
+	Ext.tree.ViewDDPlugin
+		 alias: 'plugin.treeviewdragdrop',
+	需要
+		viewConfig:{
+			plugins :{
+				ptype:'treeviewdragdrop'
+			}
+		},
+	事件
+		listeners: {
+        	drop: function(node, data, dropRec, dropPosition) {
+        	},
+        	beforedrop:function(node,data,overModel,dropPosition,dropFunction,options ){
+        	}
+    	}	
+2.模拟拷贝和黏贴
+3.删除操作
+4.多列树
+5.网友要求
+	单击树形根节点子节点也被选中
+
+
+
+
+
+
+
+
+
+	
+	        

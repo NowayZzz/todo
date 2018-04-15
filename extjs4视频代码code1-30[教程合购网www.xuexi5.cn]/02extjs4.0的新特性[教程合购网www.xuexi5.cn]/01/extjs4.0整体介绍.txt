@@ -1,0 +1,29 @@
+1.学习extjs4.0的条件
+	HTML-->了解
+	CSS-->了解
+	JS-->熟练
+	JS的OOP-->熟练
+	AJAX-->熟练
+	JSP/PHP/ASP-->熟悉其中之一
+2.extjs4.0的学习方法
+	书籍: uspcat.com推荐的书籍
+	网络: 官方网站,文档API,开源的论坛
+	勤奋: 多思考,多实践,多练习,多总结
+	总结: 猜一猜,查一查,试一试
+3.extjs4.0下载,目录介绍,开发环境搭建,开发工具安装配置
+	http://www.sencha.com/
+	spket1.6.18下载和安装
+4.HELLO WORD [演示extjs4.0中实现javaScript的alert]
+	JS实现弹出框
+	EXTJS实现弹出框
+5.简单源码分析
+	bootstrap.js
+	EXT-all-debug.js
+6.extjs4.0名词术语
+	面板Panel
+	布局Layout
+	组建Component
+	渲染Render
+7.extjs4.0对原生javaScript功能的增强
+	Array
+	Object

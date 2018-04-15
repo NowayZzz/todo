@@ -1,0 +1,15 @@
+/*
+ * 我的图标应用图标
+ */
+.chart-shortcut {
+    background-image: url(../images/chart_bar.png);
+    width: 46px;
+    height: 46px;
+}
+.x-ie6 .chart-shortcut{
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/grid48x48.png', sizingMethod='scale');
+}
+.chartApp {
+    background-image: url(../images/pie_chart_red.png);
+}

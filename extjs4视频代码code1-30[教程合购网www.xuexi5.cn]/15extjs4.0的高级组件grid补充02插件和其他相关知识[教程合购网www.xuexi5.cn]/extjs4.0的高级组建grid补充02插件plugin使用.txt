@@ -1,0 +1,151 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+可编辑插件的根 Ext.grid.plugin.Editing
+Ext.grid.plugin.Editing
+	Ext.grid.plugin.CellEditing  这个不讲(之前课程讲过)
+		(1)保存修改的两种办法
+			1.设立保存按钮,用户单击的时候保存数据
+				st.sync();
+				var records = st.getUpdatedRecords();
+				Ext.Array.each(records,function(model){
+					model.commit();
+				});			
+			2.注册edit事件
+				e.record.commit();
+	Ext.grid.plugin.RowEditing
+		使用方法:(个人推荐4.0.1a版本还是不要用这个功能)
+		Ext.create('Ext.grid.plugin.RowEditing', {
+            clicksToEdit: 1
+        })				
+--------------------------------------------------------------
+Ext.grid.plugin.DragDrop 表格拖拽
+	主意:配置有变化
+	viewConfig:{
+		plugins:[
+	        Ext.create('Ext.grid.plugin.DragDrop', {
+	        	ddGroup:'ddTree', //拖放组的名称
+	            dragGroup :'userlist', //拖拽组名称
+	            dropGroup :'userlist'  //释放租名称
+	            enableDrag:true, //是否启用
+	            enableDrop:true
+	        })]
+	}		
+	处理事件
+	listeners: {
+        drop: function(node, data, dropRec, dropPosition) {
+              var st = this.getStore();
+              for(i=0;i<st.getCount();i++){
+                  st.getAt(i).set('index',i+1);
+              }
+        }
+    }		
+--------------------------------------------------------------	
+Ext.toolbar.Paging 分页组建
+    dockedItems: [{
+    	xtype: 'pagingtoolbar',
+        store: store,
+        dock: 'bottom',
+        displayInfo: true
+    }],
+    //第二种分页的形式
+    1.
+	Ext.Loader.setPath('Ext.ux', '../../../extjs4/examples/ux');
+	2.
+	Ext.require([
+	    'Ext.ux.data.PagingMemoryProxy',
+	    'Ext.ux.SlidingPager'
+	]);    
+	3.
+    bbar: Ext.create('Ext.PagingToolbar', {
+         pageSize: 10,
+         store: store,
+         displayInfo: true,
+        plugins: Ext.create('Ext.ux.SlidingPager', {})  ---- 重点是这
+    })	
+--------------------------------------------------------------
+Ext.grid.property.Grid
+	属性配置框面板
+	当你组自动生成功能的时候了可以考虑用
+--------------------------------------------------------------
+其他一些关于表格的东西
+	------------------------	
+	列锁定
+	{text:"age",dataIndex:'age',width:100,locked:true},
+	------------------------	
+	复杂表头
+	{
+		text:'other',columns:[
+			{text:"age",dataIndex:'age',width:100,locked   : true},
+			{text:"int",dataIndex:'index',width:100}]
+	}
+	------------------------	
+	字段过滤
+	1.
+	Ext.require([
+	    'Ext.ux.grid.FiltersFeature'
+	]);
+	2.创建类
+	Ext.define("AM.class.filters",{
+		alias: 'widget.filters',
+		ftype: 'filters',
+	        encode: false, 
+	        local: true, 
+	        filters: [{
+	                type: 'boolean',
+	                dataIndex: 'visible'
+	            }
+	     ]
+	})
+	3.view层中
+	features: [Ext.create("AM.class.filters")],
+	列中{filterable: true,text:"age",dataIndex:'age',width:100,filter: {type: 'numeric'}},
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	        

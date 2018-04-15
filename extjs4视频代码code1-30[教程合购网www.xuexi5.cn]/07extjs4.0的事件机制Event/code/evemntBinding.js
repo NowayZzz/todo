@@ -1,0 +1,16 @@
+(function(){
+	Ext.onReady(function(){
+		if(Ext.isIE){
+			document.getElementById("btn2").attachEvent("onclick",function(){
+				alert("第二种事件绑定方式");
+			});
+		}else{
+			document.getElementById("btn2").addEventListener("click",function(){
+				alert("第二种事件绑定方式");
+			});		
+		}
+		Ext.get('btn3').on("click",function(){
+			alert("第三种事件绑定方式");
+		})
+	})
+})();

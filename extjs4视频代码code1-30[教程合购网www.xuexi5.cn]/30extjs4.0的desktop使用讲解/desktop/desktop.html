@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ExtTop - Desktop Sample App</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../extjs4/resources/css/ext-all.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../extjs4/examples/desktop/css/desktop.css" />
+	<link rel="stylesheet" type="text/css" href="chartApp/css/charApp.css" />
+    <script type="text/javascript" src="../../../../extjs4/builds/ext-core.js"></script>
+    <script type="text/javascript" src="classes.js"></script>
+
+    <script type="text/javascript">
+        Ext.Loader.setPath({
+            'Ext.ux.desktop': 'js',
+            MyDesktop: ''
+        });
+		//装载应用[App.js 文件MyDesktop.App类]
+        Ext.require('MyDesktop.App');
+		//初始化应用
+        var myDesktopApp;
+        Ext.onReady(function () {
+            myDesktopApp = new MyDesktop.App();
+        });
+    </script>
+</head>
+
+<body>
+    <a href="http://www.uspcat.com" target="_blank" alt="Powered by Ext JS" id="poweredby"><div></div></a>
+</body>
+</html>
+
+
+
+

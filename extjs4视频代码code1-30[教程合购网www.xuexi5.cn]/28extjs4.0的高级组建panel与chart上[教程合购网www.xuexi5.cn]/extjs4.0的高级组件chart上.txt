@@ -1,0 +1,40 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+图表分为坐标轴(axes)和图表序列(series)
+1.axes 轴
+	1.1数值轴 Ext.chart.axis.Numeric
+	1.2时间轴 Ext.chart.axis.Time
+	1.3分类轴 Ext.chart.axis.Category
+	1.4仪表轴 Ext.chart.axis.Gauge
+2.series 图表序列
+	highlight高亮,label标题,tips提示,renderer格式化
+	2.1折线图 Ext.chart.series.Line
+	2.2柱形图 Ext.chart.series.Column
+	2.3饼状图 Ext.chart.series.Pie
+	2.4条形图 Ext.chart.series.Bar
+	2.5面积图 Ext.chart.series.Area
+	2.6雷达图 Ext.chart.series.Radar --略讲
+	2.7散点图 Ext.chart.series.Scatter --略讲
+	2.8仪表图 Ext.chart.series.Gauge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

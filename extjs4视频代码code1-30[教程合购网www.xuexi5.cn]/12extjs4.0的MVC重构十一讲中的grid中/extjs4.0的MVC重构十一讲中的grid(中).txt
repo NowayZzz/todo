@@ -1,0 +1,19 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+本堂课利用ExtJs的MVC重构十一讲的内容
+1.extjs中创建应用用到的方法
+	Ext.application() 实际上是(类)Ext.app.Application
+		例子
+		Ext.application({
+		    name: 'MyApp',
+		    launch: function() {
+		        Ext.create('Ext.container.Viewport', {
+		            items: {
+		                html: 'My App'
+		            }
+		        });
+		    }
+		});
+	Ext.app.Controller 控制器
+	Ext.ComponentQuery 组建查询去(extjs4.0新特性) 实际上是(类) Ext.container.Containerxtype: container

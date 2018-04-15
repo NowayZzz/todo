@@ -1,0 +1,14 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+Reader : 主要用于将proxy数据代理读取的数据按照不同的规则进行解析,讲解析好的数据保存到Modle中
+结构图
+	Ext.data.reader.Reader 读取器的根类
+		Ext.data.reader.Json JSON格式的读取器
+			Ext.data.reader.Array 扩展JSON的Array读取器
+		Ext.data.reader.Xml XML格式的读取器
+Writer
+结构图
+	Ext.data.writer.Writer
+		Ext.data.writer.Json 对象被解释成JSON的形式传到后台
+		Ext.data.writer.Xml  对象被解释成XML的形式传到后台

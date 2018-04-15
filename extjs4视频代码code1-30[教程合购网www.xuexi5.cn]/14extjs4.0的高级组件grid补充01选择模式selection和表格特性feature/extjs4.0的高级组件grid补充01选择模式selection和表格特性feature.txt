@@ -1,0 +1,90 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+一.选择模式的根类Ext.selection.Model
+		重要方法
+			1.1撤销选择 deselect( Ext.data.Model/Index records, Boolean suppressEvent ) : void
+			1.2得到选择的数据getSelection( ) : Array
+			1.3得到最后被选择数据getLastSelected( ) : void
+			1.4判断你指定的数据是否被选择上isSelected( Record/Number record ) : Boolean
+			1.5选择你指定的行selectRange( Ext.data.Model/Number startRow, Ext.data.Model/Number endRow, [Boolean keepExisting], Object dir ) : void
+				keepExisting true保持已选则的,false重新选择
+---------------------------------------------------------------------------------------------				
+	隐藏了一个单元格的选择模式 selType: 'cellmodel'	(从这发现的Ext.grid.plugin.CellEditing)
+		重要方法
+			2.1得到被选择的单元格getCurrentPosition() Object
+					Ext.JSON.encode()
+					itemclick( Ext.view.View this, Ext.data.Model record, HTMLElement item, Number index, Ext.EventObject e, Object options )
+			2.2selectByPosition({"row":5,"column":6})
+				很实用选择你要特殊处理的数据
+---------------------------------------------------------------------------------------------				
+	Ext.selection.CheckboxModel 多选框选择器
+		重要方法
+---------------------------------------------------------------------------------------------		
+	Ext.selection.RowModel      rowmodel 行选择器
+		重要属性
+			3.1multiSelect 允许多选
+			3.2simpleSelect 单选选择功能
+			3.3enableKeyNav 允许使用键盘 
+---------------------------------------------------------------------------------------------			
+二.Grid的特性Ext.grid.feature.Feature
+	Ext.grid.feature.RowBody  表格的行体
+		重要方法
+			1.1getAdditionalData( Object data, Number idx, Ext.data.Model record, Object orig ) : void
+				1.如果你要展示这个面板那么必须复写这个方法
+				features: [
+						Ext.create("Ext.grid.feature.RowBody",{
+							getAdditionalData:function(data,idx,record,orig){
+								......
+							}
+						})
+				],	
+				2.必须返回行体的对象
+		        var headerCt = this.view.headerCt,
+		            colspan  = headerCt.getColumnCount();
+		        return {
+		            rowBody: "",
+		            rowBodyCls: this.rowBodyCls,
+		            rowBodyColspan: colspan
+		        };
+---------------------------------------------------------------------------------------------		        
+	Ext.grid.feature.AbstractSummary
+		Ext.grid.feature.Summary
+			2.1实用方法是在
+					1.第一步
+				    features: [{
+				        ftype: 'summary'
+				    }],
+					2.第二步
+					columns中配置summaryType: 'count', (count,sum,min,max,average)
+			        summaryRenderer: function(value, summaryData, dataIndex) {
+			           return Ext.String.format(' : '+value); 
+			        }		
+---------------------------------------------------------------------------------------------			        			
+	Ext.grid.feature.Grouping		
+		1.在store中设置可以分组的属性
+			groupField : ''
+		2.在view中增加代码
+			Ext.create("Ext.grid.feature.Grouping",{
+					groupByText : "职业分组",
+					groupHeaderTpl : "职业{name}  一共{rows.length}人",
+					showGroupsText : "展示分组",
+					startCollapsed : true
+				
+			}			
+		重要事件
+	    groupclick
+	    groupdblclick
+	    groupcontextmenu
+	    groupexpand
+	    groupcollapse
+		Ext.grid.feature.GroupingSummary  ------ 同学们自己学习
+	Ext.grid.feature.Chunking -----  同学们自己学习
+	
+	
+	
+	
+	
+	
+	
+	

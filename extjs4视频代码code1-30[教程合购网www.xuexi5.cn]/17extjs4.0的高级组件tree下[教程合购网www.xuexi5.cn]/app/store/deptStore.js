@@ -1,0 +1,11 @@
+Ext.define("AM.store.deptStore",{
+	extend:'Ext.data.TreeStore',
+	defaultRoodId:'root',
+	model:'AM.model.deptModel',
+	proxy:{
+		type:'ajax',
+		url:'/extjs/extjs!getDept.action',
+		reader:'json',
+		autoLoad:true
+	}
+});

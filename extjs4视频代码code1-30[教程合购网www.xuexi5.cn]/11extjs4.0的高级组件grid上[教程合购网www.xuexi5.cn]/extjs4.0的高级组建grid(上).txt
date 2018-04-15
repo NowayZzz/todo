@@ -1,0 +1,28 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+本堂课带着大家感受一下grid组建的魅力
+1.表格面板类Ext.grid.Panel 两个别名xtype:(gridpanel, grid)
+	重要的配置参数
+		columns : Array 列模式(Ext.grid.column.Columnxtype: gridcolumn)
+			重要的配置参数
+				text : String 列的标题 默认是""
+				dataIndex : String 和Model的列一一对应的
+				sortable : true 可以整理,可以进行分类的
+				field: 可编辑字典配置
+			重要方法
+				getStore 
+			重要属性
+				ownerCt
+		title : String 表格的标题
+		renderTo : Mixed 把表格渲染到什么地方
+		width : Number 宽 
+		height: Number 高			
+		frame : Boolean 是否填充渲染这个Panel
+		forceFit : true 设定表格的列是否自动填充
+		store : store 数据集合
+		tbar: [] 头部工具栏
+		dockedItems : Object/Array 表格停靠在上下左右的工具条
+		selType : 'checkboxmodel', 选择框的选择模式
+		multiSelect :true,//允许多选
+		plugins 插件

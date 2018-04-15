@@ -1,0 +1,25 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+store是一个存储数据对象Model的集合缓存,他可以为extjs的可视化组建提供数据(GridPanel,ComboBox)等
+类结构
+Ext.data.AbstractStore
+	Ext.data.Store  没有特殊情况这个类就可以满日常的开发了
+		Ext.data.ArrayStore
+		Ext.data.DirectStore
+		Ext.data.ArrayStore  内置辅助的类
+		Ext.data.JsonStroe	   内置辅助的类
+	Ext.data.TreeStore
+	
+	
+	
+Ext.data.Store 使用
+	参数
+	  autoLoad(Boolean/Object) : 自动加载数据,自动调用load
+	  data(Array) : 内置数据对象的数组,初始化的是就要被装在
+	  model(Model): 数据集合相关的模型
+	  fields(Field):字段的集合,程序会自动生成对于的Model
+	方法
+	  each( Function f, [Object scope] ) : void 变量数据中的Model
+	  
+					

@@ -1,0 +1,41 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+Ext/core
+1.Ext.core.Element
+	API解释
+		他是组建和控件的基础
+		他对一个DOM对象的封装(Document Object Model)
+	1.1如何得到Element
+		Ext.core.Element.fly(String/HTMLElement el, [String named] ) : Element
+		Ext.get(Mixed el) : Element
+	1.2	Element 相关方法
+		addClsOnClick( String className ) : Ext.core.Element
+		addClsOnOver( String className ) : Ext.core.Element
+		addKeyMap( Object config ) : Ext.util.KeyMap
+		addKeyListener( Number/Array/Object/String key, Function fn, [Object scope] ) : Ext.util.KeyMap
+		appendChild( String/HTMLElement/Array/Element/CompositeElement el ) : Ext.core.Element
+		createChild( Object config, [HTMLElement insertBefore], [Boolean returnDom] ) : Ext.core.Element
+2.Ext.core.DomHelper
+	API解释
+		他可以很容易的操作页面的HTML.和DOM元素
+	append( Mixed el, Object/String o, [Boolean returnElement] ) : HTMLElement/Ext.core.Element
+		追加一个孩子
+				
+	
+3.Ext
+	//方法是执行在文件加载完之后,onload 和 image 加载之前
+	onReady( Function fn, Object scope, Boolean withDomReady, Object options ) : void	
+	get()//不在多说
+	query( String path, [Node root] ) : Array
+		http://www.w3school.com.cn/xpath/xpath_axes.asp
+		语法看 Ext.DomQuery
+	getCmp( String id ) : void
+		返回组建管理器管理的ID组建
+	isEmpty( Mixed value, [Boolean allowEmptyString] ) : Boolean
+	namespace( String namespace1, String namespace2, String etc ) : Object
+	each( Array/NodeList/Mixed iterable, Function fn, Object scope, Boolean reverse ) : Boolean
+	apply( Object object, Object config, Object defaults ) : Object
+	encode( Mixed o ) : String
+	select( String/Array selector, [Boolean unique], [HTMLElement/String root] ) 
+	typeOf( Mixed value ) : String				

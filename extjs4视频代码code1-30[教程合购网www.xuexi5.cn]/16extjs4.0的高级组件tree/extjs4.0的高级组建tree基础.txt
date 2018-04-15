@@ -1,0 +1,36 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+类结构
+	Ext.panel.Panel
+		Ext.panel.Table
+			Ext.tree.Panel --- 他是和grid完全一样的
+1.快速实现一个DEMO
+	主要配置项
+		title 标题
+		width 宽
+		height 高
+		renderTo 渲染到什么地方
+		root 控制根节点(Ext.data.Model/Ext.data.NodeInterface)
+		animate : Boolean 控制收起和展开是发有动画效果
+		store: store 数据集合
+	重要事件
+		itemclick
+	重要方法
+					
+2.Ext.data.TreeStore
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	        

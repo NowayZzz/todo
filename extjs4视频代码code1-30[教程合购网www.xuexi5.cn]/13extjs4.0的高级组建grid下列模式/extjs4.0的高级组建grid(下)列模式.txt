@@ -1,0 +1,34 @@
+-----------------------------------------------
+      www.uspcat.com      QQ群 179245118
+-----------------------------------------------
+1.Ext.grid.column.Column xtype: gridcolumn
+	列模式的住类
+	Ext.grid.column.Action xtype: actioncolumn
+		在表格中渲染一组图标按钮,并且为他赋予某种功能
+		altText : String 设置应用image元素上的alt
+		handler : function(view,rowindex,collndex,item,e);
+		icon    : 图标资源地址
+		iconCls  : 图标样式
+		items   : 多个图标的数组   //在使用MVC的时候建议不要用  如果大家有好得放大请与uspcat联系 
+				function(o,item,rowIndex,colIndex ,e)
+		stopSelection : 设置是否单击选中不选中
+			2.把写到view的代码写到控制层
+	Ext.grid.column.Boolean xtype: booleancolumn
+		falseText,trueText
+	Ext.grid.column.Date xtype: datecolumn
+		format:'Y年m月的日'
+	Ext.grid.column.Number xtype: numbercolumn
+		format:'0,000'
+	Ext.grid.column.Template xtype: templatecolumn
+		xtype:'templatecolumn',
+		tpl :""
+		
+2.不在column 包下面的
+Ext.grid.RowNumbererxtype: rownumberer	
+	书籍字典
+		业务数据字典
+			风险等级,城市
+		不变的数据字典
+			男,女
+			是,否
+			人的血型

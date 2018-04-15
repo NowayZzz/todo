@@ -1,0 +1,25 @@
+(function(){
+	Ext.onReady(function(){
+		Ext.regModel("user",{
+			fields:[
+				{name:'name'},
+				{name:'id'}
+			],
+			proxy:{
+				type:'ajax',
+				url:'users.xml',
+				reader:{
+					type:'xml',
+					record:'user'
+				}
+			}
+		});	
+		var user = Ext.ModelManager.getModel('user');
+		user.load(1,{
+			success:function(model){
+				alert(model)
+				alert(model.get('id'))
+			}
+		})
+	});
+})();

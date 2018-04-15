@@ -1,0 +1,90 @@
+	www.uspcat.com        QQ群    16489413
+----------------------------------------------------------
+1.面板
+1.1类结构
+	Ext.Base
+		Ext.AbstractComponent
+			Ext.Component
+				Ext.container.AbstractContainer
+					Ext.container.Container
+						Ext.panel.AbstractPanel
+							Ext.panel.Panel   --  是以前版本的  Ext.Panel类
+1.2常见的子类
+	Ext.window.Window --- 控制窗口
+	Ext.form.Panel --- 控制form
+	Ext.panel.Table --- 控制grid
+	Ext.tab.Panel --- 控制工具条
+	Ext.menu.Menu --- 控制菜单
+	Ext.tip.Tip
+	Ext.container.ButtonGroup  
+1.3组成面板的部件
+	底部工具栏,顶部工具栏,面板头部,面板底部,面板体
+------------------------------------------------------------	
+2.布局		
+2.1Auto自动布局[Ext.layout.container.Auto]
+组件没有指定任何布局方式的时候Auto布局就是默认的布局方式,他采用最原始的HTML流式排版的布局方式
+2.2Fit自适应布局[Ext.layout.container.Fit]
+他是他的(第一个也是唯一个)子元素填满自身的body
+2.3Accordion折叠(手风琴)布局[Ext.layout.container.Accordion]
+他是初始化多个版面,当一个版面处于打开状态下,其他版面就会处于收起状态
+2.4Card卡片布局[Ext.layout.container.Card]
+和折叠布局不同之处在于他是自定义按钮来切换
+---------------------布局第二讲---------------------------------			
+2.5Anchor锚点布局[Ext.layout.container.Anchor]
+根据容器的大小为其子元素进行的布局和定位
+	1.百分比
+	2.偏移量
+	3.参考边
+2.6Absolute绝对定位[Ext.layout.container.Absolute]
+2.7多选框布局Ext.layout.container.CheckboxGroup --- 之前讲过了,在这不讲了
+2.8Column列布局[Ext.layout.container.Column]
+列风格布局,每一列的宽度可以根据百分比或者固定数值来控制
+2.9Table表格布局[Ext.layout.container.Table]	
+和传统的HTML布局方式一样的布局使用方法
+2.10Border边界布局[Ext.layout.container.Border]
+可以控制上,下,左,右,中
+2.10盒布局
+Ext.layout.container.Box
+	Ext.layout.container.VBox 竖排(竖直盒)
+	Ext.layout.container.HBox 横排(水平盒)
+	主要参数
+	Box
+		flex 具有配置flex的子项,会根据占有总量的比之来决定自己的大小
+		pack 控制子元素展示位置[start左面(这时候flex生效),center(中间),end(右面)]
+		padding 边距
+	HBox
+		align[top,middle,stretch,stretchmax]
+	VBox
+		align[left,center,stretch,stretchmax]
+2.11Ext.tab.Panel -- 特殊(他不在布局的包下面)
+选项卡布局
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+		
